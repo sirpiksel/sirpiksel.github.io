@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>piksel's Underscan Finder</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-</head>
-<body>
-  <div class="top"></div>
-  <div class="left"></div>
-  <div class="right"></div>
-  <div class="bottom"></div>
-  <header>
-    <h1>Underscan Finder</h1>
-  </header>
-  <section>
-    <aside>
-      <p>Top: <span id="outTop"></span>px</p>
-      <input type="range" min="0" max="150" value="100" id="top">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>piksel's Underscan Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="icons/favicon_32.png" sizes="32x32">
+    <link rel="icon" href="icons/favicon_48.png" sizes="48x48">
+    <link rel="icon" href="icons/favicon_96.png" sizes="96x96">
+    <link rel="icon" href="icons/favicon_144.png" sizes="144x144">
+  </head>
+  <body>
+    <div class="top"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="bottom"></div>
+    <header>
+      <h1>Underscan Finder</h1>
+    </header>
+    <section>
+      <aside>
+        <p>Top: <span id="outTop"></span>px</p>
+        <input type="range" min="0" max="150" value="100" id="top">
 
-      <p>Left: <span id="outLeft"></span>px</p>
-      <input type="range" min="0" max="150" value="100" id="left">
+        <p>Left: <span id="outLeft"></span>px</p>
+        <input type="range" min="0" max="150" value="100" id="left">
 
-      <p>Right: <span id="outRight"></span>px</p>
-      <input type="range" min="0" max="150" value="100" id="right">
+        <p>Right: <span id="outRight"></span>px</p>
+        <input type="range" min="0" max="150" value="100" id="right">
 
-      <p>Bottom: <span id="outBottom"></span>px</p>
-      <input type="range" min="0" max="150" value="100" id="bottom">
-    </aside>
-  </section>
-  <footer>
-    <a href="https://github.com/sirpiksel/sirpiksel.github.io?tab=MIT-1-ov-file">LICENSE</a>
-  </footer>
-</body>
-<script>
+        <p>Bottom: <span id="outBottom"></span>px</p>
+        <input type="range" min="0" max="150" value="100" id="bottom">
+      </aside>
+    </section>
+    <footer>
+      <a href="https://github.com/sirpiksel/sirpiksel.github.io?tab=MIT-1-ov-file">LICENSE</a>
+    </footer>
+  </body>
+  <script>
   document.addEventListener('DOMContentLoaded', function() {
     initUnderscanTool();
   });
@@ -74,5 +79,5 @@
     outBottom.innerHTML = this.value;
     lineBottom.style.bottom = this.value + "px";
   }
-</script>
+  </script>
 </html>

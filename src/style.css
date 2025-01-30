@@ -121,13 +121,13 @@ div.bottom {
 /* color scheme */
 
 :root {
-    --foreground: #101214;
-    --background: #f1f7fa;
-    --background-sec: #dae8f1;
-    --radius: 25vh;
-    --underscan-accent: #ad33ff;
-    --underscan-border: 1px;
-    --underscan-padding: 100px;
+  --foreground: #101214;
+  --background: #f1f7fa;
+  --background-sec: #dae8f1;
+  --radius: 25vh;
+  --underscan-accent: #ad33ff;
+  --underscan-border: 1px;
+  --underscan-padding: 100px;
 }
 
 @media (prefers-color-scheme: dark) {
