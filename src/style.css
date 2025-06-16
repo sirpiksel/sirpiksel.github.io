@@ -118,13 +118,31 @@ div.bottom {
   bottom: var(--underscan-padding);
 }
 
+div#screenTest {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+}
+
+div#screenTest.transparent {
+  pointer-events: none;
+  background-color: transparent !important;
+}
+
+
+p#screenData {
+  margin: 1em;
+}
+
 /* color scheme */
 
 :root {
   --foreground: #101214;
   --background: #f1f7fa;
   --background-sec: #dae8f1;
-  --radius: 25vh;
+  --radius: 1em;
   --underscan-accent: #ad33ff;
   --underscan-border: 1px;
   --underscan-padding: 100px;

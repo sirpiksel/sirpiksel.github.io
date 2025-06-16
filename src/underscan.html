@@ -40,44 +40,8 @@
     </footer>
   </body>
   <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    initUnderscanTool();
-  });
-
-  let slideTop = document.getElementById("top");
-  let outTop = document.getElementById("outTop");
-  let lineTop = document.getElementsByClassName("top")[0];
-  outTop.innerHTML = slideTop.value;
-  slideTop.oninput = function() {
-    outTop.innerHTML = this.value;
-    lineTop.style.top = this.value + "px";
-  }
-
-  let slideLeft = document.getElementById("left");
-  let outLeft = document.getElementById("outLeft");
-  let lineLeft = document.getElementsByClassName("left")[0];
-  outLeft.innerHTML = slideLeft.value;
-  slideLeft.oninput = function() {
-    outLeft.innerHTML = this.value;
-    lineLeft.style.left = this.value + "px";
-  }
-
-  let slideRight = document.getElementById("right");
-  let outRight = document.getElementById("outRight");
-  let lineRight = document.getElementsByClassName("right")[0];
-  outRight.innerHTML = slideRight.value;
-  slideRight.oninput = function() {
-    outRight.innerHTML = this.value;
-    lineRight.style.right = this.value + "px";
-  }
-
-  let slideBottom = document.getElementById("bottom");
-  let outBottom = document.getElementById("outBottom");
-  let lineBottom = document.getElementsByClassName("bottom")[0];
-  outBottom.innerHTML = slideBottom.value;
-  slideBottom.oninput = function() {
-    outBottom.innerHTML = this.value;
-    lineBottom.style.bottom = this.value + "px";
-  }
+    document.addEventListener("DOMContentLoaded", () => {
+      initSliders();
+    });
   </script>
 </html>

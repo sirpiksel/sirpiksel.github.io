@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>piksel's Underscan Finder</title>
+    <title>piksel's Screen Tester</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
@@ -13,66 +13,17 @@
     <link rel="icon" href="icons/favicon_144.png" sizes="144x144">
   </head>
   <body>
+    <section>
+      <aside>
+        <p id="screenData"></p>
+      </aside>
+    </section>
+    <div id="screenTest"></div>
   </body>
   <script>
-    (() => {
-      const colours = [
-        'oklch(0.1809 0.0052 248.12)',
-        'oklch(0.628 0.2577 29.23)',
-        'oklch(0.8664 0.294827 142.4953)',
-        'oklch(0.452 0.313214 264.052)',
-        'oklch(0.968 0.211 109.77)',
-        'oklch(0.7017 0.3225 328.36)',
-        'oklch(0.9054 0.15455 194.7689)',
-        'oklch(1 0 0)',
-        'oklch(0.5999 0 0)',
-        'oklch(0 0 0)'
-      ];
-
-      let index = 0;
-      const html = document.documentElement;
-      const body = document.body;
-
-      html.style.margin = body.style.margin = '0';
-
-      const setColour = () => {
-        const c = colours[index];
-        html.style.backgroundColor = body.style.backgroundColor = c;
-      };
-
-      const next = () => { index = (index + 1) % colours.length; setColour(); };
-      const prev = () => { index = (index - 1 + colours.length) % colours.length; setColour(); };
-
-      body.addEventListener('click', () => {
-        if (!document.fullscreenElement && html.requestFullscreen) {
-          html.requestFullscreen().then(() => {
-            body.focus();
-          }).catch(() => { /* void */ });
-        }
-      });
-
-      window.addEventListener('keydown', ev => {
-        switch (ev.key) {
-          case 'Enter':
-          case ' ':
-          case 'ArrowRight':
-            ev.preventDefault();
-            next();
-            break;
-          case 'ArrowLeft':
-            ev.preventDefault();
-            prev();
-            break;
-          case 'Escape':
-            if (document.fullscreenElement && document.exitFullscreen) {
-              document.exitFullscreen();
-            }
-            break;
-        }
-      });
-
-      body.setAttribute('tabindex', '0');
-      setColour();
-    })();
+    document.addEventListener("DOMContentLoaded", () => {
+      screenTest();
+      screenData();
+    });
   </script>
 </html>
